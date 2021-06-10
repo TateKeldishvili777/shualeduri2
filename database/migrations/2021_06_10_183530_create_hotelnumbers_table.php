@@ -15,6 +15,17 @@ class CreateHotelnumbersTable extends Migration
     {
         Schema::create('hotelnumbers', function (Blueprint $table) {
             $table->id();
+
+            $table->string('room_name');
+
+            $table->integer('room_qty');
+
+            $table->integer('hotel_id');
+
+            $table->boolean('is_occupied');
+
+            $table->string('occupied_by');
+
             $table->timestamps();
         });
     }
